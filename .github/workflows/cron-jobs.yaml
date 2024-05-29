@@ -2,6 +2,8 @@ on:
     schedule:
         - cron: "*/5 * * * *"
     workflow_dispatch:
+env:
+    GH_TOKEN: ${{ github.token }}
 jobs:
     hello_world:
         runs-on: ubuntu-latest
