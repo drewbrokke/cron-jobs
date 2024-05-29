@@ -10,3 +10,8 @@ jobs:
               run: echo "Hello World"
             - name: Next thing
               run: echo "Foo Bar"
+    gh-repo-sync:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Sync drewbrokke/liferay-portal to liferay/liferay-portal
+              run: gh repo sync --source liferay/liferay-portal liferay-devtools/liferay-portal
